@@ -2320,6 +2320,24 @@ def run_migration():
         migrate_json_labels(conn, "ground_truth", "admin")
 
 
+def ensure_env_admin():
+    """If ADMIN_USERNAME and ADMIN_PASSWORD are set as environment variables
+    and that user doesn't already exist, create it. Lets you set up a real
+    admin account on hosts (like Render's free tier) that don't provide
+    shell access, just by adding env vars and redeploying."""
+    username = os.environ.get("ADMIN_USERNAME")
+    password = os.environ.get("ADMIN_PASSWORD")
+    if not username or not password:
+        return
+    conn = init_db(DB_PATH)
+    if get_user_by_username(conn, username):
+        print(f"Admin user '{username}' already exists, skipping creation.")
+        return
+    pw_hash = generate_password_hash(password)
+    uid = create_user(conn, username, pw_hash, "admin")
+    print(f"Created admin user '{username}' from environment variables (id: {uid})")
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--create-user", nargs="+", metavar=("USERNAME", "PASSWORD"),
@@ -2347,6 +2365,7 @@ if __name__ == "__main__":
 
     # Normal startup: run migration then start server
     run_migration()
+    ensure_env_admin()
     port = int(os.environ.get("PORT", 5000))
     print(f"Starting server on port {port}")
     print("Default login: admin / changeme  <-- CHANGE THIS if deploying publicly")
