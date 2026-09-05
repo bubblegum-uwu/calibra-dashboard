@@ -1,0 +1,42 @@
+FOR EACH FAILURE CATEGORY
+
+Add labels for runs
+runtime stats for each run and substep
+substeps for each run 
+show the results for each substep
+
+DASHBOARD:
+summary tab
+run group id
+search based on run id, run date time
+
+
+RESEARCH More:
+1. What other types of problem can we detect using this Testing Harness Tool
+
+
+Things addressed:
+Run labels, runtime stats, substeps when clicked on, results for each substep
+Summary tab is there but could be better UI
+search is possible based on run id, date time, as well as failure category(or unlabeled)
+ground truth was also researched and notes added by me manually in order to calibrate the llm for future (my_labels.json)
+certain labels that were previously passed are not anymore - for example the issue with france's capital's population (although answer was correct process was wrongly done)
+added start.ps1 - one command to activate my api keys and venv
+.env - to store api
+run_batch is also new - runs all 8 questions and is put together with a group id
+now I have a live label server, there is an inline pass/fail button that saves to my own mylabels.json
+static dashboard with the summary tab, substeps, group id, search and category bars
+
+THINGS I FOUND
+fixed stalelatestclaim partially by inserting the date into the ai's prompt itself
+fixed the undergroundsynthetis by crossreferencing INSTRUCTION (for example the stackoverlfow question correctly returns javascript now instead of python)
+confirmed that the ambiguousmetriconssitency (unable to fix yet tried 3 times 2 judge prompts and oen agent prompt) you can also only detect this issue using the consistency checker.
+tried with different claude model showing that with the same model the kappa value is significantly higher (0.6) versus cross model (0.161) creating a huge gap. basically shows when both the laber and judge are same claude model the kappa looks correct since they have the same blind spots.
+ran two regression checks to show that judge overstates its improvements 
+stalelatestclaim is the most common failure
+
+
+Local 
+
+
+

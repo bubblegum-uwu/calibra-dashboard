@@ -1,0 +1,44 @@
+{
+  "85398385": {
+    "task": "What's the capital of the country with the largest population in Africa?",
+    "label": "pass",
+    "failure_category": null,
+    "notes": "Correct: Nigeria, Abuja."
+  },
+  "ed05f87c": {
+    "task": "Who is the current head of state of the country with the second-largest economy in South America?",
+    "label": "pass",
+    "failure_category": null,
+    "notes": "Milei correctly identified as current president of Argentina. 'Second-largest economy' is a contestable ranking claim (Colombia sometimes closes the gap depending on year/metric) -- labeling as a soft pass since the underlying ranking premise is source-dependent, not a clean fact."
+  },
+  "d68f248d": {
+    "task": "What is the population of the capital city of the country where the Eiffel Tower is located?",
+    "label": "pass",
+    "failure_category": null,
+    "notes": "Correct, and handled city-proper vs. metro-area ambiguity well by giving both numbers instead of picking one silently."
+  },
+  "a001b0ff": {
+    "task": "Who directed the highest-grossing film starring the actor who won Best Actor at the most recent Oscars?",
+    "label": "pass",
+    "failure_category": null,
+    "notes": "Chain checks out: Adrien Brody won Best Actor at the 97th Academy Awards for The Brutalist; King Kong (2005), directed by Peter Jackson, is plausibly his highest-grossing starring role."
+  },
+  "b3528e5f": {
+    "task": "Which programming language is ranked most popular in the latest Stack Overflow developer survey, and who originally created it?",
+    "label": "fail",
+    "failure_category": "stale_latest_claim",
+    "notes": "Cited the 2024 survey as 'the latest' without verifying whether a more recent survey exists or checking the search result's actual publish date. The agent trusted whatever it found as authoritative on recency instead of cross-checking. JavaScript / Brendan Eich facts themselves are correct -- the failure is specifically the unverified 'latest' claim."
+  },
+  "28eb33dc": {
+    "task": "Who is the CEO of the parent company of the airline with the most domestic routes in the United States?",
+    "label": "fail",
+    "failure_category": "query_reformulation_thrashing",
+    "notes": "Diagnosed from the full trace: the agent issued 6 LLM calls and 6 searches, and every single one resulted in another tool call -- it never once decided to commit to an answer. All 5 search queries were near-duplicates of each other ('airline with most domestic routes', 'which US airline operates the most domestic routes 2024 2025', 'Southwest vs American vs United domestic routes', etc.). Root cause: the specific metric requested ('number of domestic routes per airline') isn't a commonly published stat -- every source returned a different proxy (busiest routes by revenue, by seat capacity, market share %) and the agent kept grinding for the exact metric instead of settling for a proxy with a caveat. It also burned its entire step budget on hop 1 of a 2-hop question and never attempted to find the CEO at all. Contrast with run ba364990 (tallest building), which handled similar ambiguity well by presenting multiple interpretations instead of endlessly searching. Fix applied: added a system prompt instructing the agent to (a) budget steps across multi-hop sub-questions, (b) give a best-effort answer with an explicit caveat after 2-3 failed attempts at an exact metric rather than reformulating indefinitely, and (c) check source recency before treating something as 'latest'. Also raised max_steps from 6 to 8. Re-run this exact question after the fix to see if it now either succeeds or fails gracefully with a caveat instead of MAX_STEPS_REACHED."
+  },
+  "ba364990": {
+    "task": "What is the tallest building in the city that hosted the most recent Summer Olympics?",
+    "label": "pass",
+    "failure_category": null,
+    "notes": "Handled genuine ambiguity (tallest structure vs. tallest habitable building) by presenting both interpretations instead of confidently picking one -- arguably the correct behavior for a question this ambiguous. Good test case later for whether the judge should reward this kind of hedging or penalize it for not committing to one answer."
+  }
+}

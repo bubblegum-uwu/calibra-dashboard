@@ -1,0 +1,50 @@
+{
+  "ca51f33c": {
+    "task": "What's the capital of the country with the largest population in Africa?",
+    "label": "pass",
+    "failure_category": null,
+    "notes": "Correct: Nigeria, Abuja."
+  },
+  "38630164": {
+    "task": "Who is the current head of state of the country with the second-largest economy in South America?",
+    "label": "pass",
+    "failure_category": null,
+    "notes": "Correctly identified Milei as Argentina's president. Also found and correctly reported real, very current news (verified via web search) about Colombia's June 21, 2026 election -- the agent's date-awareness now finds genuinely fresh information. Minor style note (not a failure): the final answer buries the directly-requested fact under a long tangent about Colombia that wasn't asked for."
+  },
+  "39a14cb0": {
+    "task": "What is the population of the capital city of the country where the Eiffel Tower is located?",
+    "label": "pass",
+    "failure_category": null,
+    "notes": "Correct, handled city-proper vs metro ambiguity well again."
+  },
+  "01157721": {
+    "task": "Who directed the highest-grossing film starring the actor who won Best Actor at the most recent Oscars?",
+    "label": "pass",
+    "failure_category": null,
+    "notes": "Same correct chain as previous batches: Brody -> King Kong -> Peter Jackson."
+  },
+  "1c7f3a6c": {
+    "task": "What is the GDP per capita of the country that won the most recent FIFA World Cup?",
+    "label": "pass",
+    "failure_category": null,
+    "notes": "Argentina (2022) still correctly identified as most recent completed World Cup winner."
+  },
+  "871b49f0": {
+    "task": "Which programming language is ranked most popular in the latest Stack Overflow developer survey, and who originally created it?",
+    "label": "fail",
+    "failure_category": "ungrounded_synthesis",
+    "notes": "Verified via web search: the real 2025 Stack Overflow Developer Survey reports JavaScript as still the most-used language (66%). Python's actual 2025 headline was fastest-growing usage (+7 points) and most-desired-to-learn-next -- a different metric entirely from 'most popular.' The agent found the correct, current survey (the date fix worked) but misread/conflated two different stats into the wrong headline conclusion. This is a more advanced failure than simple staleness: the retrieval was correct, the synthesis was not."
+  },
+  "d52c7e87": {
+    "task": "Who is the CEO of the parent company of the airline with the most domestic routes in the United States?",
+    "label": "fail",
+    "failure_category": "ambiguous_metric_inconsistency",
+    "notes": "Technically converged on an answer this time (Southwest Airlines / Bob Jordan, both individually correct facts), so this would look like a pass in isolation. Labeling as fail because: the previous batch's run of the exact same question, with no code changes, confidently answered American Airlines / Robert Isom instead. Both chains are internally correct but the underlying ranking premise is genuinely contested, and the agent never acknowledges that -- it just picks an answer with full confidence each time, and which answer it picks isn't stable across runs. This is the most important finding so far: only visible by running the same question multiple times, not catchable from a single trace."
+  },
+  "a5d8ef1e": {
+    "task": "What is the tallest building in the city that hosted the most recent Summer Olympics?",
+    "label": "pass",
+    "failure_category": null,
+    "notes": "Again handled the structure-vs-building ambiguity well by presenting multiple interpretations rather than picking one falsely confidently."
+  }
+}

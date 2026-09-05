@@ -1,0 +1,23 @@
+{
+  "question": "What's the capital of the country with the largest population in Africa?",
+  "n_runs": 5,
+  "group_id": "consistency_1784318712",
+  "answers": [
+    "The most populous country in Africa is **Nigeria**, with a population of over **220 million people** in 2026. The capital of Nigeria is **Abuja**.",
+    "The most populous country in Africa is **Nigeria**, with a population of over **220 million people** in 2026. The capital of Nigeria is **Abuja**.\n\nAbuja is a planned city located in the center of the country within the Federal Capital Territory (FCT). It replaced Lagos as the nation's capital on December 12, 1991.",
+    "The search results show Nigeria is #1 (not fully shown but implied), and the top entries confirm Nigeria as Africa's most populous country. Nigeria's capital is **Abuja**. Let me verify this quickly.\n\nThe most populous country in Africa is **Nigeria**, and its capital is **Abuja**.\n\n- Nigeria has a population of over **220 million people**, making it the most populous nation on the African continent.\n- **Abuja** has been Nigeria's capital since 1991, when it replaced Lagos as the seat of government.",
+    "The most populous country in Africa is **Nigeria**, with an estimated population of over **220 million** in 2026. The capital of Nigeria is **Abuja**.\n\nAbuja has served as Nigeria's capital since December 12, 1991, when it replaced Lagos. It is strategically located at the geographic center of the country within the Federal Capital Territory (FCT).",
+    "The most populous country in Africa is **Nigeria**, with an estimated population of over **220 million** people in 2026. The capital of Nigeria is **Abuja**.\n\nAbuja is a planned city located in the geographic center of Nigeria. It replaced Lagos as the country's capital on December 12, 1991, and serves as the seat of Nigeria's federal government."
+  ],
+  "core_claims": [
+    "Abuja",
+    "Abuja",
+    "Abuja",
+    "Abuja",
+    "Abuja"
+  ],
+  "claim_counts": {
+    "Abuja": 5
+  },
+  "is_consistent": true
+}

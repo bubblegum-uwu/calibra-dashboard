@@ -1,0 +1,23 @@
+{
+  "question": "Who is the current head of state of the country with the second-largest economy in South America?",
+  "n_runs": 5,
+  "group_id": "consistency_1784327075",
+  "answers": [
+    "The answer is clear! Here's the breakdown:\n\n- The **largest economy** in South America is **Brazil**.\n- The **second-largest economy** in South America is **Argentina**.\n- The current **head of state of Argentina** is **Javier Milei**, who has served as President since December 2023.",
+    "The **second-largest economy in South America** is **Argentina** (with a nominal GDP of approximately $688 billion in 2026, according to IMF data), and its current **head of state is President Javier Milei**. He has served as Argentina's 59th president since his inauguration on December 10, 2023.",
+    "The answer is clear! The **second-largest economy in South America is Argentina**, and its current head of state is **Javier Milei**. He has served as President of Argentina since December 2023. As President, he holds the roles of both head of state and head of government under Argentina's constitution.",
+    "The **second-largest economy in South America is Argentina**, and its current head of state is **Javier Milei**. He has been serving as the 59th President of Argentina since his inauguration on December 10, 2023. Milei is a libertarian economist and politician who leads the *La Libertad Avanza* party.",
+    "The answer is clear:\n\nThe **second-largest economy in South America is Argentina**, and its current head of state is **Javier Milei**, who has served as President of Argentina since December 2023. He is both head of state and head of government under Argentina's presidential system."
+  ],
+  "core_claims": [
+    "Javier Milei",
+    "Javier Milei",
+    "Javier Milei",
+    "Javier Milei",
+    "Javier Milei"
+  ],
+  "claim_counts": {
+    "Javier Milei": 5
+  },
+  "is_consistent": true
+}

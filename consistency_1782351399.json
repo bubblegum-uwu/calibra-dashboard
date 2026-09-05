@@ -1,0 +1,24 @@
+{
+  "question": "Who is the CEO of the parent comany of the airline with the most domestic routes in the United States?",
+  "n_runs": 5,
+  "answers": [
+    "MAX_STEPS_REACHED",
+    "All sources confirm that **Bob Jordan** remains the CEO as of 2026. Here's the full answer:\n\n---\n\nAccording to aviation data (including Wikipedia's summary of airline rankings), **Southwest Airlines** holds the record for the **greatest number of routes** among U.S. carriers, making it the airline with the most domestic routes in the United States.\n\nSouthwest Airlines is its own publicly traded parent company \u2014 **Southwest Airlines Co.** \u2014 and its **President, CEO, and Vice Chairman** is **Bob Jordan**. A 38-year Southwest veteran, Bob Jordan has held 15 different roles at the company and has served as CEO since 2022.",
+    "I now have a confirmed and complete answer.\n\n**American Airlines** operates the most domestic routes in the United States, serving nearly **350 destinations** with approximately 6,800 daily flights \u2014 the largest domestic route network of any U.S. carrier. Its parent company is **American Airlines Group, Inc.**\n\nThe CEO of American Airlines Group is **Robert Isom**, who has held the position since 2022 and remains in the role as of 2026.\n\n> \u26a0\ufe0f **Note on the ranking:** Both American Airlines and United Airlines have competing claims about which has the most destinations/routes domestically, as United also describes itself as serving \"more destinations than any other U.S. carrier.\" The distinction can depend on whether you count regional partners and how \"routes\" vs. \"destinations\" are measured. However, by most widely cited metrics \u2014 including BTS passenger data, OAG schedule data, and the airlines' own descriptions \u2014 **American Airlines** holds the top spot for domestic route coverage.",
+    "MAX_STEPS_REACHED",
+    "I now have all the information needed. American Airlines is the largest U.S. airline by number of destinations served and domestic routes, and its parent company is **American Airlines Group**, whose CEO is **Robert Isom**.\n\nHere is the full answer:\n\n**American Airlines** operates the most domestic routes in the United States. It is widely recognized as the world's largest airline by number of destinations served, with nearly 6,800 daily flights to around 350 destinations, the most extensive domestic network in the U.S.\n\nAmerican Airlines' parent company is **American Airlines Group, Inc.** The CEO of American Airlines Group is **Robert Isom**, who has held the role since 2022 (and has been with the company since 2016)."
+  ],
+  "core_claims": [
+    "NO_CLEAR_ANSWER",
+    "Bob Jordan",
+    "Robert Isom",
+    "NO_CLEAR_ANSWER",
+    "Robert Isom"
+  ],
+  "claim_counts": {
+    "NO_CLEAR_ANSWER": 2,
+    "Bob Jordan": 1,
+    "Robert Isom": 2
+  },
+  "is_consistent": false
+}

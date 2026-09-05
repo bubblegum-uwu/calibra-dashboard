@@ -1,0 +1,101 @@
+{
+  "before": {
+    "n": 8,
+    "pass_rate": 0.625,
+    "details": [
+      {
+        "run_id": "85398385",
+        "verdict": "pass",
+        "category": null
+      },
+      {
+        "run_id": "ed05f87c",
+        "verdict": "pass",
+        "category": null
+      },
+      {
+        "run_id": "d68f248d",
+        "verdict": "pass",
+        "category": null
+      },
+      {
+        "run_id": "a001b0ff",
+        "verdict": "pass",
+        "category": null
+      },
+      {
+        "run_id": "b08a87d5",
+        "verdict": "fail",
+        "category": "stale_latest_claim"
+      },
+      {
+        "run_id": "b3528e5f",
+        "verdict": "fail",
+        "category": "stale_latest_claim"
+      },
+      {
+        "run_id": "28eb33dc",
+        "verdict": "fail",
+        "category": "max_steps_exhausted"
+      },
+      {
+        "run_id": "ba364990",
+        "verdict": "pass",
+        "category": null
+      }
+    ]
+  },
+  "after": {
+    "n": 8,
+    "pass_rate": 0.875,
+    "details": [
+      {
+        "run_id": "ab1ce322",
+        "verdict": "pass",
+        "category": null
+      },
+      {
+        "run_id": "3a51da57",
+        "verdict": "pass",
+        "category": "stale_latest_claim"
+      },
+      {
+        "run_id": "245a2b69",
+        "verdict": "pass",
+        "category": null
+      },
+      {
+        "run_id": "9d077057",
+        "verdict": "pass",
+        "category": null
+      },
+      {
+        "run_id": "c24a13d4",
+        "verdict": "pass",
+        "category": null
+      },
+      {
+        "run_id": "323b5acb",
+        "verdict": "pass",
+        "category": null
+      },
+      {
+        "run_id": "cc60fc90",
+        "verdict": "fail",
+        "category": "ambiguous_metric_inconsistency"
+      },
+      {
+        "run_id": "6fa8bd36",
+        "verdict": "pass",
+        "category": null
+      }
+    ]
+  },
+  "diff": 0.25,
+  "ci_95": [
+    -0.125,
+    0.625
+  ],
+  "fishers_p_value": 0.5692307692307692,
+  "significant_at_0.05": false
+}

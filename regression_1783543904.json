@@ -1,0 +1,111 @@
+{
+  "before": {
+    "n": 10,
+    "pass_rate": 0.6,
+    "details": [
+      {
+        "run_id": "85398385",
+        "verdict": "pass",
+        "category": null
+      },
+      {
+        "run_id": "c3c05663",
+        "verdict": "pass",
+        "category": null
+      },
+      {
+        "run_id": "b90e9cc6",
+        "verdict": "fail",
+        "category": "ungrounded_synthesis"
+      },
+      {
+        "run_id": "07670bab",
+        "verdict": "fail",
+        "category": "stale_latest_claim"
+      },
+      {
+        "run_id": "ae17b2f9",
+        "verdict": "pass",
+        "category": null
+      },
+      {
+        "run_id": "34835295",
+        "verdict": "pass",
+        "category": null
+      },
+      {
+        "run_id": "5b651137",
+        "verdict": "pass",
+        "category": null
+      },
+      {
+        "run_id": "c12bd0c0",
+        "verdict": "fail",
+        "category": "ambiguous_metric_inconsistency"
+      },
+      {
+        "run_id": "92c2dcb2",
+        "verdict": "pass",
+        "category": null
+      },
+      {
+        "run_id": "38630164",
+        "verdict": "fail",
+        "category": "ungrounded_synthesis"
+      }
+    ]
+  },
+  "after": {
+    "n": 8,
+    "pass_rate": 0.875,
+    "details": [
+      {
+        "run_id": "668bd899",
+        "verdict": "pass",
+        "category": null
+      },
+      {
+        "run_id": "242bc54b",
+        "verdict": "pass",
+        "category": null
+      },
+      {
+        "run_id": "adbcca1a",
+        "verdict": "pass",
+        "category": null
+      },
+      {
+        "run_id": "93038409",
+        "verdict": "pass",
+        "category": null
+      },
+      {
+        "run_id": "f2e24ec9",
+        "verdict": "pass",
+        "category": null
+      },
+      {
+        "run_id": "4715e803",
+        "verdict": "pass",
+        "category": null
+      },
+      {
+        "run_id": "85cee6f3",
+        "verdict": "fail",
+        "category": "ungrounded_synthesis"
+      },
+      {
+        "run_id": "34f1ef2c",
+        "verdict": "pass",
+        "category": null
+      }
+    ]
+  },
+  "diff": 0.275,
+  "ci_95": [
+    -0.125,
+    0.675
+  ],
+  "fishers_p_value": 0.3137254901960784,
+  "significant_at_0.05": false
+}

@@ -1,0 +1,110 @@
+{
+  "85398385": {
+    "task": "What's the capital of the country with the largest population in Africa?",
+    "label": "pass",
+    "failure_category": null,
+    "notes": "Correctly identified most populous country in Africa and observed its capital correctly as Abuja"
+  },
+  "c3c05663": {
+    "task": "What's the capital of the country with the largest population in Africa?",
+    "label": "pass",
+    "failure_category": null,
+    "notes": "Correctly identified most populous country in Africa and observed its capital correctly as Abuja"
+  },
+  "b90e9cc6": {
+    "task": "Which programming language is ranked most popular in the latest Stack Overflow developer survey, and who originally created it?",
+    "label": "fail",
+    "failure_category": "ungrounded_synthesis",
+    "notes": "Reported Python as most popular but the 2025 survey says JavaScript is #1 most-used at 66%. Python was fastest-growing, not most popular \u00e2\u20ac\u201d agent conflated two different metrics."
+  },
+  "07670bab": {
+    "task": "What is the GDP per capita of the country that won the most recent FIFA World Cup?",
+    "label": "pass",
+    "failure_category": null,
+    "notes": "Correctly identified Argentina (2022), noted 2026 tournament ongoing. GDP figure (~$14,360 IMF 2025 estimate) differs slightly from World Bank 2024 actual ($13,969.8) but both are legitimate sources \u00e2\u20ac\u201d not a failure."
+  },
+  "ae17b2f9": {
+    "task": "Who directed the highest-grossing film starring the actor who won Best Actor at the most recent Oscars?",
+    "label": "fail",
+    "failure_category": "stale_latest_claim",
+    "notes": "Searched for 'Best Actor Oscar winner 2025' instead of 2026 or 'most recent'. Got Adrien Brody/The Brutalist instead of Michael B. Jordan/Sinners. Failed at the query level, not the reasoning level."
+  },
+  "34835295": {
+    "task": "What is the population of the capital city of the country where the Eiffel Tower is located?",
+    "label": "fail",
+    "failure_category": "stale_latest_claim",
+    "notes": "Searched for 2025 population instead of 2026 despite knowing today's date. Got lucky because Paris population is stable year-over-year, but if asked for exact figures the 2025 vs 2026 data would differ. Process is broken regardless of outcome."
+  },
+  "5b651137": {
+    "task": "Who is the current head of state of the country with the second-largest economy in South America?",
+    "label": "fail",
+    "failure_category": "stale_latest_claim",
+    "notes": "Searched for 'largest economies in South America 2025' instead of 2026. Argentina's economic ranking is volatile enough that 2025 vs 2026 data could differ. Process is broken regardless of outcome."
+  },
+  "c12bd0c0": {
+    "task": "Who is the CEO of the parent company of the airline with the most domestic routes in the United States?",
+    "label": "fail",
+    "failure_category": "ambiguous_metric_inconsistency",
+    "notes": "Two issues: (1) all search queries used 2025 instead of 2026 (stale_latest_claim), and (2) the premise 'most domestic routes' is genuinely contested between Southwest and American Airlines depending on metric used, but agent picked Southwest/Bob Jordan with full confidence and no caveat. Labeling primary category as ambiguous_metric_inconsistency because the ambiguity is more fundamental -- even with 2026 data this question would still be contested."
+  },
+  "92c2dcb2": {
+    "task": "Who is the CEO of the parent company of the airline with the most domestic routes in the United States?",
+    "label": "fail",
+    "failure_category": "stale_latest_claim",
+    "notes": "Same as previous this is test"
+  },
+  "668bd899": {
+    "task": "What's the capital of the country with the largest population in Africa?",
+    "label": "pass",
+    "failure_category": null,
+    "notes": "Successfully went through correct process and arrived at corrrect solution"
+  },
+  "242bc54b": {
+    "task": "Who is the current head of state of the country with the second-largest economy in South America?",
+    "label": "fail",
+    "failure_category": "stale_latest_claim",
+    "notes": "Failed to search for most recent (2026), but in Step 5 it considered argentina's leader from 2025 to 2026"
+  },
+  "adbcca1a": {
+    "task": "What is the population of the capital city of the country where the Eiffel Tower is located?",
+    "label": "fail",
+    "failure_category": "stale_latest_claim",
+    "notes": "Fails to estabilish 2026, searches for population of Paris France in 2025 in Step 2"
+  },
+  "93038409": {
+    "task": "Who directed the highest-grossing film starring the actor who won Best Actor at the most recent Oscars?",
+    "label": "fail",
+    "failure_category": "stale_latest_claim",
+    "notes": "Fails to identify Ocsar winner of 2026, instead identifies 2025. Thus reaches wrong answer"
+  },
+  "f2e24ec9": {
+    "task": "What is the GDP per capita of the country that won the most recent FIFA World Cup?",
+    "label": "fail",
+    "failure_category": "stale_latest_claim",
+    "notes": "Found 2022 Argentina from stale sources without verifying whether 2026 tournament is ongoing. GDP searched with 2025. Compare to earlier run which correctly identified 2026 tournament in progress"
+  },
+  "4715e803": {
+    "task": "Which programming language is ranked most popular in the latest Stack Overflow developer survey, and who originally created it?",
+    "label": "pass",
+    "failure_category": null,
+    "notes": "\"Correctly identified JavaScript at 66% as most popular, distinguishing from Python's fastest-growing claim. This is the ungrounded_synthesis failure from earlier batches \u2014 now handled correctly. Good cross-referencing behavior."
+  },
+  "85cee6f3": {
+    "task": "Who is the CEO of the parent company of the airline with the most domestic routes in the United States?",
+    "label": "fail",
+    "failure_category": "ambiguous_metric_inconsistency",
+    "notes": "Although answered more clearly than previous run, it still didnt hedge"
+  },
+  "34f1ef2c": {
+    "task": "What is the tallest building in the city that hosted the most recent Summer Olympics?",
+    "label": "pass",
+    "failure_category": null,
+    "notes": "Correctly distinguished Summer vs Winter Olympics when initial search returned Milan/Cortina 2026. Well-handled ambiguity on 'tallest building' by presenting multiple valid interpretations. No stale year in queries"
+  },
+  "38630164": {
+    "task": "Who is the current head of state of the country with the second-largest economy in South America?",
+    "label": "pass",
+    "failure_category": null,
+    "notes": "Correctly identified Milei as Argentina's president. Also found and correctly reported real, very current news (verified via web search) about Colombia's June 21, 2026 election -- the agent's date-awareness now finds genuinely fresh information. Minor style note (not a failure): the final answer buries the directly-requested fact under a long tangent about Colombia that wasn't asked for."
+  }
+}

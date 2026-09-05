@@ -1,0 +1,23 @@
+{
+  "question": "Who directed the highest-grossing film starring the actor who won Best Actor at the most recent Oscars?",
+  "n_runs": 5,
+  "group_id": "consistency_1784329638",
+  "answers": [
+    "This confirms it clearly. **King Kong (2005)** is Adrien Brody's highest-grossing film, with ~$556.9\u2013$562 million worldwide, and it was directed by **Peter Jackson**.\n\nHere's the full chain of reasoning:\n\n1. **Most recent Oscars (97th Academy Awards, 2025):** **Adrien Brody** won Best Actor for his role in *The Brutalist*.\n2. **Highest-grossing film starring Adrien Brody:** ***King Kong* (2005)**, which grossed approximately **$562 million** worldwide.\n3. **Director of *King Kong* (2005):** **Peter Jackson**.\n\n**The answer is Peter Jackson.** He directed *King Kong* (2005), which is the highest-grossing film starring Adrien Brody, the most recent Best Actor Oscar winner.",
+    "Here's the full chain of answers:\n\n1. **Most recent Best Actor Oscar winner:** **Adrien Brody** (97th Academy Awards, 2025, for *The Brutalist*)\n2. **His highest-grossing film:** ***King Kong* (2005)**, which grossed ~$550\u2013556 million worldwide\n3. **Director of that film:** **Peter Jackson**\n\n**Peter Jackson** directed *King Kong* (2005), the highest-grossing film starring Adrien Brody, the most recent Best Actor Oscar winner.",
+    "Here's the full answer:\n\n**Peter Jackson** directed the highest-grossing film starring Adrien Brody, the most recent Best Actor Oscar winner (97th Academy Awards, 2025).\n\n- **Best Actor winner:** Adrien Brody (for *The Brutalist*)\n- **His highest-grossing film:** *King Kong* (2005), which grossed ~$550\u2013556 million worldwide\n- **Director:** **Peter Jackson**",
+    "The answer is clear! Here's the full chain:\n\n1. **Most recent Oscars (2025):** **Adrien Brody** won Best Actor for *The Brutalist*.\n2. **Highest-grossing film starring Adrien Brody:** *King Kong* (2005), which grossed approximately **$562 million worldwide**.\n3. **Director of *King Kong* (2005):** **Peter Jackson**.\n\n**Peter Jackson** directed the highest-grossing film starring Adrien Brody.",
+    "Here's the full answer:\n\n1. **Most recent Best Actor Oscar winner:** **Adrien Brody** (97th Academy Awards, 2025, for *The Brutalist*)\n2. **His highest-grossing film:** ***King Kong* (2005)**, which grossed approximately **$550 million worldwide**\n3. **Director of that film:** **Peter Jackson**\n\n**Peter Jackson** directed the highest-grossing film starring Adrien Brody."
+  ],
+  "core_claims": [
+    "Peter Jackson",
+    "Peter Jackson",
+    "Peter Jackson",
+    "Peter Jackson",
+    "Peter Jackson"
+  ],
+  "claim_counts": {
+    "Peter Jackson": 5
+  },
+  "is_consistent": true
+}

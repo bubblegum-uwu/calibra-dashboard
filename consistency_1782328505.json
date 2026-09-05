@@ -1,0 +1,24 @@
+{
+  "question": "Who is the CEO of the parent company of the airline with the most domestic routes in the United States?",
+  "n_runs": 5,
+  "answers": [
+    "Southwest Airlines is its own parent company (Southwest Airlines Co.), and the answer is clear!\n\n**Southwest Airlines** has the most domestic routes in the United States. Its parent company is **Southwest Airlines Co.**, and the CEO is **Bob Jordan**, who serves as President, Chief Executive Officer, and Vice Chairman of the Board. Bob Jordan is a 38-year Southwest veteran who has held numerous leadership roles across the company.",
+    "I now have all the information needed. Here is the answer:\n\n**American Airlines** has the most domestic routes in the United States \u2014 it is the world's largest airline by destinations served, operating flights to nearly 350 destinations and up to 7,000 peak daily departures. Its parent company is **American Airlines Group Inc.**, and the CEO of American Airlines Group is **Robert Isom**.",
+    "Southwest Airlines Co. (NYSE: LUV) is itself the parent company \u2014 it is a publicly traded corporation and not owned by a larger airline group. The airline operates under **Southwest Airlines Co.**, and its President and CEO is **Bob Jordan**.\n\n---\n\nHere is the full answer:\n\n**Southwest Airlines** carries more nonstop domestic passengers and operates more domestic routes than any other U.S. airline, making it the largest domestic carrier in the United States.\n\nSouthwest Airlines is not a subsidiary \u2014 **Southwest Airlines Co. (NYSE: LUV)** is itself the parent company. The CEO of Southwest Airlines Co. is **Bob Jordan**, who has served as President and CEO since 2022. As recently as May 2026, he was speaking publicly about the airline's strategic direction, including potential long-haul international expansion.",
+    "MAX_STEPS_REACHED",
+    "Southwest Airlines Co. is its own parent company \u2014 there is no separate holding company above it. The airline and the corporate entity are one and the same.\n\nHere is the full answer:\n\n**Southwest Airlines** holds the record for the **greatest number of routes** among U.S. airlines (domestic routes). Southwest Airlines Co. is its own parent company, and its **CEO is Bob Jordan**, who has served as President, CEO, and Vice Chairman of the Board since 2022. He is a 38-year Southwest veteran who has held 15 different roles within the company."
+  ],
+  "core_claims": [
+    "Bob Jordan",
+    "Robert Isom",
+    "Bob Jordan",
+    "NO_CLEAR_ANSWER",
+    "Bob Jordan"
+  ],
+  "claim_counts": {
+    "Bob Jordan": 3,
+    "Robert Isom": 1,
+    "NO_CLEAR_ANSWER": 1
+  },
+  "is_consistent": false
+}

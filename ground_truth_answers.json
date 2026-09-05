@@ -1,0 +1,56 @@
+{
+  "1": {
+    "question": "What's the capital of the country with the largest population in Africa?",
+    "ground_truth": "Abuja",
+    "notes": "Nigeria is most populous (~230M). Capital is Abuja since 1991 (not Lagos).",
+    "last_verified": "2026-07"
+  },
+  "2": {
+    "question": "Who is the current head of state of the country with the second-largest economy in South America?",
+    "ground_truth": "Javier Milei",
+    "notes": "Brazil is #1 (~$2.6T). Argentina is #2 (~$640B). Milei president since Dec 2023.",
+    "last_verified": "2026-07"
+  },
+  "3": {
+    "question": "What is the population of the capital city of the country where the Eiffel Tower is located?",
+    "ground_truth": "~2.1 million (city proper); ~11-12 million (metro area)",
+    "notes": "Eiffel Tower \u2192 France \u2192 Paris. City commune: ~2.07M. Greater Paris: ~11.3M.",
+    "last_verified": "2026-07"
+  },
+  "4": {
+    "question": "Who directed the highest-grossing film starring the actor who won Best Actor at the most recent Oscars?",
+    "ground_truth": "Ryan Coogler (directed Black Panther)",
+    "notes": "98th Oscars (March 2026): Michael B. Jordan won for Sinners. Highest-grossing starring role: Black Panther ($1.34B). Director: Ryan Coogler.",
+    "last_verified": "2026-07"
+  },
+  "5": {
+    "question": "What is the GDP per capita of the country that won the most recent FIFA World Cup?",
+    "ground_truth": "~$14,000-14,500 USD (Argentina, 2022 winner)",
+    "notes": "2026 World Cup final is July 19 2026 \u2014 not concluded yet. Argentina won 2022. GDP per capita ~$13,970 (World Bank 2024) or ~$14,357 (IMF 2025 est).",
+    "last_verified": "2026-07"
+  },
+  "6": {
+    "question": "Which programming language is ranked most popular in the latest Stack Overflow developer survey, and who originally created it?",
+    "ground_truth": "JavaScript (Brendan Eich, 1995)",
+    "notes": "2025 SO survey: JavaScript #1 most-used at 66%, 15 consecutive years. Python is fastest-growing/most-wanted \u2014 NOT most-used. Do not confuse metrics.",
+    "last_verified": "2026-07"
+  },
+  "7": {
+    "question": "Who is the CEO of the parent company of the airline with the most domestic routes in the United States?",
+    "ground_truth": "CONTESTED \u2014 depends on metric. Robert Isom (American Airlines Group) by seats/flights; Bob Jordan (Southwest Airlines Co.) by route count.",
+    "notes": "American leads by seat capacity, total flights, passengers. Southwest leads by distinct route count (point-to-point model). Any single confident answer without caveats is a fail.",
+    "last_verified": "2026-07"
+  },
+  "8": {
+    "question": "What is the tallest building in the city that hosted the most recent Summer Olympics?",
+    "ground_truth": "Eiffel Tower (330m as structure) or Tour First (231m, tallest habitable skyscraper in greater Paris) or Tour Montparnasse (210m, tallest in city proper)",
+    "notes": "Paris hosted 2024 Summer Olympics. Tallest structure: Eiffel Tower 330m. Tallest habitable in \u00cele-de-France: Tour First 231m. Tallest in Paris commune: Tour Montparnasse 210m. Agent should acknowledge ambiguity.",
+    "last_verified": "2026-07"
+  },
+  "9": {
+    "question": "What is the most recent war with the highest death toll?",
+    "ground_truth": "CONTESTED",
+    "notes": "",
+    "last_verified": ""
+  }
+}

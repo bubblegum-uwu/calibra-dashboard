@@ -1,0 +1,111 @@
+{
+  "before": {
+    "n": 9,
+    "pass_rate": 0.2222222222222222,
+    "details": [
+      {
+        "run_id": "add7c368",
+        "verdict": "pass",
+        "category": null
+      },
+      {
+        "run_id": "5c0b972b",
+        "verdict": "fail",
+        "category": "other"
+      },
+      {
+        "run_id": "52f413f1",
+        "verdict": "fail",
+        "category": "other"
+      },
+      {
+        "run_id": "e80203ae",
+        "verdict": "fail",
+        "category": "stale_latest_claim"
+      },
+      {
+        "run_id": "3ef29c30",
+        "verdict": "fail",
+        "category": "other"
+      },
+      {
+        "run_id": "bdc75ba5",
+        "verdict": "pass",
+        "category": null
+      },
+      {
+        "run_id": "e1af8045",
+        "verdict": "fail",
+        "category": "other"
+      },
+      {
+        "run_id": "13b95ec3",
+        "verdict": "fail",
+        "category": "other"
+      },
+      {
+        "run_id": "46567ebf",
+        "verdict": "fail",
+        "category": "other"
+      }
+    ]
+  },
+  "after": {
+    "n": 9,
+    "pass_rate": 0.1111111111111111,
+    "details": [
+      {
+        "run_id": "cb47a7b8",
+        "verdict": "pass",
+        "category": null
+      },
+      {
+        "run_id": "855d7550",
+        "verdict": "fail",
+        "category": "other"
+      },
+      {
+        "run_id": "97dee245",
+        "verdict": "fail",
+        "category": "other"
+      },
+      {
+        "run_id": "c26431d9",
+        "verdict": "fail",
+        "category": "stale_latest_claim"
+      },
+      {
+        "run_id": "ccfc971f",
+        "verdict": "fail",
+        "category": "other"
+      },
+      {
+        "run_id": "bf9fd30d",
+        "verdict": "fail",
+        "category": "ungrounded_synthesis"
+      },
+      {
+        "run_id": "2e6fa2c2",
+        "verdict": "fail",
+        "category": "max_steps_exhausted"
+      },
+      {
+        "run_id": "89c33c0f",
+        "verdict": "fail",
+        "category": "other"
+      },
+      {
+        "run_id": "4f1a2204",
+        "verdict": "fail",
+        "category": "other"
+      }
+    ]
+  },
+  "diff": -0.1111111111111111,
+  "ci_95": [
+    -0.4444444444444444,
+    0.2222222222222222
+  ],
+  "fishers_p_value": 1.0,
+  "significant_at_0.05": false
+}
