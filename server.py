@@ -224,6 +224,9 @@ body{font-family:'IBM Plex Sans',sans-serif;background:#080B0F;min-height:100vh;
 .btn{width:100%;background:linear-gradient(135deg,#4F7CFF,#9B59F7);color:#fff;border:none;padding:12px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;margin-top:8px;}
 .btn:hover{opacity:0.9;}
 .error{background:#2E0D0D;border:1px solid #4A1A1A;color:#f87171;padding:10px 14px;border-radius:6px;font-size:13px;margin-bottom:16px;}
+.demo-hint{background:#0D1F2E;border:1px solid #1A3A4A;color:#7DD3FC;padding:12px 14px;border-radius:6px;font-size:12.5px;margin-bottom:16px;line-height:1.5;}
+.demo-hint strong{color:#BAE6FD;}
+.demo-hint code{background:#08131A;padding:2px 6px;border-radius:4px;font-family:monospace;color:#E2E8F0;}
 .login-footer{margin-top:20px;font-size:12px;color:#4A5568;text-align:center;}
 </style>
 </head>
@@ -237,6 +240,12 @@ body{font-family:'IBM Plex Sans',sans-serif;background:#080B0F;min-height:100vh;
   <div class="login-card">
     <h2>Sign in</h2>
     <p>Enter your credentials to access the dashboard.</p>
+    {% if demo_username %}
+    <div class="demo-hint">
+      <strong>Viewing as a visitor?</strong> Use the demo login below:<br>
+      Username: <code>{{ demo_username }}</code> &nbsp; Password: <code>{{ demo_password }}</code>
+    </div>
+    {% endif %}
     {% if error %}<div class="error">{{ error }}</div>{% endif %}
     <form method="POST">
       <div class="field">
@@ -516,7 +525,11 @@ def login_page():
             session["role"] = user["role"]
             return redirect(url_for("index"))
         error = "Invalid username or password"
-    return render_template_string(LOGIN_PAGE, error=error)
+    demo_username = os.environ.get("DEMO_USERNAME")
+    demo_password = os.environ.get("DEMO_PASSWORD")
+    return render_template_string(
+        LOGIN_PAGE, error=error, demo_username=demo_username, demo_password=demo_password
+    )
 
 
 @app.route("/logout")
