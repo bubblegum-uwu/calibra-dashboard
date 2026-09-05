@@ -2347,8 +2347,9 @@ if __name__ == "__main__":
 
     # Normal startup: run migration then start server
     run_migration()
-    print("Starting server at http://localhost:5000")
-    print("Default login: admin / changeme")
+    port = int(os.environ.get("PORT", 5000))
+    print(f"Starting server on port {port}")
+    print("Default login: admin / changeme  <-- CHANGE THIS if deploying publicly")
     print("Create more users: python server.py --create-user <name> <password> [admin|labeler]")
-    print("Admin panel: http://localhost:5000/admin")
-    app.run(debug=False, port=5000, threaded=True)
+    print("Admin panel: /admin")
+    app.run(host="0.0.0.0", port=port, debug=False, threaded=True)
