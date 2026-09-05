@@ -2320,22 +2320,29 @@ def run_migration():
         migrate_json_labels(conn, "ground_truth", "admin")
 
 
-def ensure_env_admin():
-    """If ADMIN_USERNAME and ADMIN_PASSWORD are set as environment variables
-    and that user doesn't already exist, create it. Lets you set up a real
-    admin account on hosts (like Render's free tier) that don't provide
-    shell access, just by adding env vars and redeploying."""
-    username = os.environ.get("ADMIN_USERNAME")
-    password = os.environ.get("ADMIN_PASSWORD")
+def ensure_env_user(username_var, password_var, role):
+    """If the given env vars are set and that user doesn't already exist,
+    create it with the given role. Reused for both the real admin account
+    and a public demo/viewer account, since Render's free tier has no
+    shell access to run --create-user manually."""
+    username = os.environ.get(username_var)
+    password = os.environ.get(password_var)
     if not username or not password:
         return
     conn = init_db(DB_PATH)
     if get_user_by_username(conn, username):
-        print(f"Admin user '{username}' already exists, skipping creation.")
+        print(f"User '{username}' already exists, skipping creation.")
         return
     pw_hash = generate_password_hash(password)
-    uid = create_user(conn, username, pw_hash, "admin")
-    print(f"Created admin user '{username}' from environment variables (id: {uid})")
+    uid = create_user(conn, username, pw_hash, role)
+    print(f"Created '{role}' user '{username}' from environment variables (id: {uid})")
+
+
+def ensure_env_admin():
+    ensure_env_user("ADMIN_USERNAME", "ADMIN_PASSWORD", "admin")
+    # Demo/viewer account for public links -- "labeler" role, so it can't
+    # reach /admin or manage other users, just view + label runs.
+    ensure_env_user("DEMO_USERNAME", "DEMO_PASSWORD", "labeler")
 
 
 if __name__ == "__main__":
